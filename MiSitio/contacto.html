@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Pollería Chapala</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="Index.html" class="logo"> POLLERÍA <span>CHAPALA</span></a>
+    <nav>
+        <a href="Index.html">Inicio</a>
+        <a href="menu.html">Menú</a>
+        <a class="activo" href="contacto.html">Contacto</a>
+    </nav>
+    <a href="menu.html" class="boton boton-nav">Ver menú ↗</a>
+</header>
+
+<main>
+    <section class="titulo-pagina">
+        <span class="etiqueta">ESTAMOS PARA ATENDERTE</span>
+        <h1>¡Hablemos de <span>poll@s!</span></h1>
+        <p>¿Tienes dudas o quieres conocer nuestros productos? Escríbenos.</p>
+        <div class="migas"><a href="Index.html">Inicio</a> / Contacto</div>
+    </section>
+
+    <section class="seccion contacto-layout">
+        <div class="contacto-info">
+            <span class="etiqueta">CONTÁCTANOS</span>
+            <h2>Será un gusto<br>atenderte </h2>
+            <p>Consulta nuestros productos, horarios y opciones para tus pedidos.</p>
+
+            <div class="dato-contacto">
+                <div class="dato-icono">📍</div>
+                <div>
+                    <h3>Ubicación</h3> 
+                    <p>El briseño, Jalisco, México</p> 
+                    <small>Calle Humuhumunukunukunapa`ua N.23 casi 24</small> 
+                </div>
+            </div>
+
+            <div class="dato-contacto">
+                <div class="dato-icono">📞</div>
+                <div>
+                    <h3>Teléfono</h3>
+                    <p>3325942216</p>
+                   
+                </div>
+            </div>
+
+            <div class="dato-contacto">
+                <div class="dato-icono">🕒</div>
+                <div>
+                    <h3>Horario de atención</h3>
+                    <p>Lunes a domingo</p>
+                    <small>6:07 a.m.- 6:07 p.m.</small>
+                </div>
+            </div>
+
+            <a class="boton boton-whatsapp"
+               href="https://wa.me/?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Poller%C3%ADa%20Chapala"
+               target="_blank" rel="noopener">
+                 Consultar por WhatsApp
+            </a>
+        </div>
+
+        <div class="formulario-card">
+            <div class="formulario-titulo">
+                <span class="etiqueta">ENVÍANOS UN MENSAJE</span>
+                <h2>¿En qué podemos ayudarte?</h2>
+                <p>Completa los campos y te mostraremos una confirmación.</p>
+            </div>
+
+            <form id="formContacto">
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" name="nombre" type="text"
+                       placeholder="Escribe tu nombre" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="correo" type="email"
+                       placeholder="ejemplo@correo.com" required>
+
+                <label for="asunto">Motivo del mensaje</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">Selecciona una opción</option>
+                    <option>Consulta sobre el menú</option>
+                    <option>Pedido de comida</option>
+                    <option>Horario de atención</option>
+                    <option>Otro asunto</option>
+                </select>
+
+                <label for="mensaje">Tu mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5"
+                          placeholder="Cuéntanos qué necesitas..."
+                          required></textarea>
+
+                <button class="boton boton-enviar" type="submit">
+                    Enviar mensaje ↗
+                </button>
+
+                <p id="respuesta" class="respuesta" role="status"
+                   aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <section class="franja-contacto">
+        <div>
+            <h2>¿Ya tienes hambre?</h2>
+            <p>Explora nuestro menú y comete un pollo con el acompañamiento que mas le guffy a Timmy Turner!</p>
+        </div>
+        <a href="menu.html" class="boton boton-claro">Ver menú →</a>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="Index.html" class="logo"> POLLERÍA <span>CHAPALA</span></a>
+    <p>El sabor que convierte cada comida en un momento especial.</p>
+    <div class="footer-links">
+        <a href="Index.html">Inicio</a>
+        <a href="menu.html">Menú</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+    <small>© 2026 Pollería Chapala · Luis Raul Raudry Muñiz</small>
+</footer>
+
+<script>
+    const formulario = document.getElementById("formContacto");
+    const respuesta = document.getElementById("respuesta");
+
+    formulario.addEventListener("submit", function(evento) {
+        evento.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+
+        respuesta.textContent =
+            "¡Gracias, " + nombre +!
+        formulario.reset();
+    });
+</script>
+
+</body>
+</html>
