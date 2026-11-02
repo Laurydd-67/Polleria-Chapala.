@@ -139,7 +139,7 @@ p {
 }
 
 .etiqueta {
-    color: #d95720;
+    color: #000000;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -180,7 +180,7 @@ p {
 
 .tarjeta h3,
 .producto h3 {
-    color: #d95720;
+    color: #000000;
 }
 
 .tarjeta p,
@@ -248,7 +248,7 @@ p {
 }
 
 .titulo-pagina h1 span {
-    color: #f07832;
+    color: #d87b41;
 }
 
 .migas {
@@ -374,4 +374,8 @@ p {
     color: #d95720;
     text-decoration: none;
     margin: 10px;
+}
+.img-logo {
+    text-align: start;
+    border-radius: 67%;
 }
